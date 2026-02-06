@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>平方计算</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<nav style="text-align:center; margin-bottom:20px;">
+    <a href="/">首页</a> |
+    <a href="/about">关于</a> |
+    <a href="/square">平方计算</a>
+</nav>
+
+<h1>平方计算工具</h1>
+
+<form method="post">
+    <input name="number" placeholder="请输入一个数字">
+    <button type="submit">计算平方</button>
+</form>
+
+{% if result %}
+<div class="result">
+    结果：{{ result }}
+</div>
+{% endif %}
+
+</div>
+</body>
+</html>
